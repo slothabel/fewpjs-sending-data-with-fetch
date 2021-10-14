@@ -31,10 +31,6 @@ function submitData(name, email){
         body: JSON.stringify(formData)
       };
     return fetch("http://localhost:3000/users", configObj)
-    // Use a then() call to access the Response object and use its built-in json()
-    //  method to parse the contents of the body property.
-    //  Use a second then() to access this newly converted object. 
-    // From this object, find the new id and append this value to the DOM
     .then(function(response) {
         return response.json();
       })
